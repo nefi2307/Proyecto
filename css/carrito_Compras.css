@@ -1,0 +1,154 @@
+:root{
+    --principal: #c5ae3a;
+    --principal_transparente: #c5ae3aa6;
+    --principal_oscuro: #b9a334;
+    --secundario: #0a090e;
+    --terciario: #ffffff;
+
+    --separadores: #c9c8c8;
+
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris: #ececec;
+    --gris_oscuro: #d9d7d7;
+}
+
+/* Formato de texto -----------------------------------------------------*/
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.2rem;
+}
+p{
+    font-size: 1rem;
+}
+
+/* Body ---------------------------------------------------------------------*/
+body{
+    text-align: center;
+    font-family: Raleway, sans-serif;
+}
+
+/* Header -------------------------------------------------------------------*/
+.fondo_Header{
+    background-color: var(--principal_oscuro);
+    height: 4rem;
+}
+header{
+    background-color: var(--principal_transparente);
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+header .logo{
+    color: var(--terciario);
+    display:flex;
+    align-items: center;
+    padding-left: 2rem; /* Despega el logo de la izquierda*/ 
+}
+header h1{
+    padding-left: 0.4rem;
+}
+header span{
+    font-size:1.2rem;
+}
+header .nav{
+    display: flex;
+}
+header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--terciario);
+    padding: 0 1.5rem;
+}
+header a:hover{
+    font-weight: bold;
+    background-color: var(--principal_oscuro);
+    height: 3rem;
+    border-radius: 10%;
+}
+header .iconos{
+    display: flex;
+    padding: 2rem;
+}
+header .iconos a{
+    padding: 0.5rem 0.5rem;
+    border-radius: 20%;
+    height: 1rem;
+    cursor: pointer;
+}
+.iconos .icon:hover{
+    stroke-width: 2.8px;
+    background-color: var(--principal_oscuro);
+} 
+
+/* Contenedor carrito --------------------------------------------------- */
+.contenedor_principal .titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor_principal h1{
+    margin-right: 1rem;
+}
+.titulo .icon{
+    stroke: var(--negro);
+}
+.contenedor_principal{
+    background-color: var(--gris);
+    width: 80%;
+    padding: 1rem 0;
+    margin: 1rem auto;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 20%), -10px 10px 5px rgba(0, 0, 0, 20%);
+}
+
+.cont_Compras{
+    display: flex;
+    background-color: var(--gris_oscuro);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2), -1px 1px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--separadores);
+    align-items: center;
+    width: 90%;
+    height: 10rem;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+.cont_Compras h2, .cont_Compras h3, .cont_Compras p{
+    width: 40%;
+    font-size: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cont_Compras p{
+    font-weight: normal;
+    margin-top: 10px;
+}
+.cont_Compras img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2), -1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer --------------------------------------------------------------- */
+footer{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-top: 1px solid var(--principal);
+    width: 90%;
+    height: 4rem;
+    margin: 0 auto;
+}

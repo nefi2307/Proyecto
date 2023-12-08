@@ -1,0 +1,255 @@
+:root{
+    --principal: #c5ae3a;
+    --principal_transparente: #c5ae3aa6;
+    --principal_oscuro: #b9a334;
+    --principal_oscuro: #93822a;
+    --secundario: #0a090e;
+    --terciario: #ffffff;
+
+    --separadores: #979797;
+
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris: #ececec;
+}
+
+/* Formato de texto -----------------------------------------------------*/
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.2rem;
+}
+p{
+    font-size: 1rem;
+}
+
+/* Body ---------------------------------------------------------------------*/
+body{
+    text-align: center;
+    font-family: Raleway, sans-serif;
+}
+
+/* Header -------------------------------------------------------------------*/
+.fondo_Header{
+    background-color: var(--principal_oscuro);
+    height: 4rem;
+}
+header{
+    background-color: var(--principal_transparente);
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+header .logo{
+    color: var(--terciario);
+    display:flex;
+    align-items: center;
+    padding-left: 2rem; /* Despega el logo de la izquierda*/ 
+}
+header h1{
+    padding-left: 0.4rem;
+}
+header span{
+    font-size:1.2rem;
+}
+header .nav{
+    display: flex;
+}
+header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--terciario);
+    padding: 0 1.5rem;
+}
+header a:hover{
+    font-weight: bold;
+    background-color: var(--principal_oscuro);
+    height: 3rem;
+    border-radius: 10%;
+}
+header .iconos{
+    display: flex;
+    padding: 2rem;
+}
+header .iconos a{
+    padding: 0.5rem 0.5rem;
+    border-radius: 20%;
+    height: 1rem;
+    cursor: pointer;
+}
+.iconos .icon:hover{
+    stroke-width: 2.8px;
+    background-color: var(--principal_oscuro);
+}
+
+.header_img{
+    height: 30rem;
+    width: 100%;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.Saltillo{
+    background-image: url(../img/saltillo_boletos.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Vergel{
+    background-image: url(../img/vergel_boletos.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.header_img::before{
+    content: "";
+    background-color: rgba(0, 0, 0, 40%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+/* Datos del viaje --------------------------------------------- */
+.datosViaje{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gris);
+    width: 30%;
+    float: right;
+    margin-bottom: 1rem;
+    margin-right: 3rem;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 20%), -10px 10px 5px rgba(0, 0, 0, 20%);
+    padding: 1rem; /* Añade espacio interno al contenedor */
+    border-radius: 10px;
+}
+.datosViaje h2, .datosViaje h3, .datosViaje p{
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.datosViaje h3 p{
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+.datosViaje h2{
+    font-size: 1.2rem;
+}
+
+.formDatos{
+    display: flex;
+    flex-direction: column;    
+ 
+}
+.formDatos label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.formDatos input{
+    border: none;
+    text-align: center;
+}
+.formDatos .boton{
+    background-color: var(--negro);
+    color: var(--blanco);
+    height: 3.5rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+.formDatos .boton:hover{
+    background-color: var(--blanco);
+    color: var(--principal);
+}
+     
+
+/* Asientos ------------------------------------------------------*/
+.asientosNombre{
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+.centrar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; 
+}
+
+.outer-seat {
+    margin: 3px; 
+}
+
+.outer-seat{
+    width: 60px;
+      height: 60px;
+    border-radius: 9px;
+    border: 3px solid #D8D8D8 ;
+      background: white;
+    position: relative;
+    margin: 4px;
+}
+
+.inner-seat{
+    width: 50px;
+      height: 50px;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0px 0px -25px;
+      background: #D8D8D8 ;
+    position: absolute;
+}
+  
+#div-inline{float: left; }
+  
+.outer-seat:hover{
+    border-color: var(--principal_oscuro);
+}
+  
+#div-inline:hover .inner-seat{
+    background: var(--principal_oscuro);
+}
+  
+.clearBoth { clear:both; }
+  
+.selected-innerColor { 
+    background-color: var(--principal_transparente); 
+}
+  
+.selected-outerColor {
+    border-color: var(--principal_transparente);
+}
+
+.selectedOcupado-innerColor { 
+    background-color: var(--principal_oscuro); 
+}
+  
+.selectedOcupado-outerColor {
+    border-color: var(--principal_oscuro);
+}
+
+/* Footer --------------------------------------------------------------- */
+footer{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-top: 1px solid var(--principal);
+    width: 90%;
+    height: 4rem;
+    margin: 0 auto;
+}

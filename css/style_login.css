@@ -1,0 +1,202 @@
+:root{
+    --principal: #c5ae3a;
+    --principal_transparente: #c5ae3aa6;
+    --principal_oscuro: #b9a334;
+    --secundario: #0a090e;
+    --terciario: #ffffff;
+
+    --separadores: #979797;
+
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris: #ececec;
+}
+
+/* Header -------------------------------------------------------------------*/
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Raleway, sans-serif;
+    background-color: var(--principal_oscuro);
+    overflow-x:hidden ;
+}
+
+/* Header -------------------------------------------------------------------*/
+.fondo_Header{
+    background-color: var(--principal_oscuro);
+    height: 4rem;
+}
+header{
+    background-color: var(--principal_transparente);
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+header .logo{
+    color: var(--terciario);
+    display:flex;
+    align-items: center;
+    padding-left: 2rem; /* Despega el logo de la izquierda*/ 
+}
+header h1{
+    padding-left: 0.4rem;
+}
+header span{
+    font-size:1.2rem;
+}
+header .nav{
+    display: flex;
+}
+header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--terciario);
+    padding: 0 1.5rem;
+}
+header a:hover{
+    font-weight: bold;
+    background-color: var(--principal_oscuro);
+    height: 3rem;
+    border-radius: 10%;
+}
+header .iconos{
+    display: flex;
+    padding: 2rem;
+}
+header .iconos a{
+    padding: 0.5rem 0.5rem;
+    border-radius: 20%;
+    height: 1rem;
+    cursor: pointer;
+}
+.iconos .icon:hover{
+    stroke-width: 2.8px;
+    background-color: var(--principal_oscuro);
+}
+
+/*Contenedor Login --------------------------------------------------------------------*/
+.contenedorLogin {
+    display: flex;    
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Alinea los elementos hijos a la izquierda */
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    padding-left: 100px;
+    position: relative;
+}
+#registroForm{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+label{
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+.contenedorLogin .titulo{
+    padding-top: -80px;
+    font-size: 30px;
+}
+.datos {    
+    margin-top: -60px;
+    background-color: var(--gris);
+    float: right;
+    padding: 4rem;
+    width: 25rem;
+    margin-right: 90px;
+    height: 15rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 50%);
+    position: relative; /* Establece la posición relativa para que el botón sea posicionado de forma absoluta con respecto a este contenedor */
+    
+}
+.datos a{
+    display: flex;
+    justify-content: center;
+    color: var(--principal_oscuro);
+}
+.contenedor-imagen {
+    margin-top: -40px;
+    background-image: url(../img/imagen_login.jpg); /* Ruta de la imagen */    
+    padding: 50px;
+    width: 450px;
+    height: 450px;
+    margin-right: 90px;
+    background-size: cover;
+    
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 50%);
+}
+p{
+    font-size: .5rem;
+    color: var(--negro);
+}
+span{
+    margin-top: -100px;
+}
+
+
+button[type="submit"]:hover {
+    background-color: var(--principal); /* Nuevo color de fondo cuando se pasa el cursor */
+    color: var(--blanco);
+}
+button[type="submit"]{
+    position: absolute;
+    bottom: -30px; /* Ajusta la distancia desde el borde inferior del contenedor */
+    left: 50%; /* Coloca el botón en el centro horizontal del contenedor */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    background-color: var(--negro);
+    color: var(--principal);
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.5s ease;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 50%);
+    width: 100%;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid var(--principal);
+    border-radius: 10px;
+    font-size: 15px;
+    color: var(--secundario);
+}
+input[type="email"]{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid var(--principal);
+    border-radius: 10px;
+    font-size: 15px;
+    color: var(--secundario);
+}
+input[type="password"]{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid var(--principal);
+    border-radius: 10px;
+    font-size: 15px;
+    color: var(--secundario);
+}
+
+/* Footer --------------------------------------------------------------- */
+footer{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-top: 1px solid var(--blanco);
+    width: 90%;
+    height: 4rem;
+    margin: 0 auto;
+}
